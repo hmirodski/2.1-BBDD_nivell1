@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS optics_store;
+CREATE DATABASE optics_store;
