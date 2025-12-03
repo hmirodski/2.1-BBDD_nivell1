@@ -25,9 +25,9 @@ CREATE TABLE glasses (
     frame_color VARCHAR(30),
     lens_color VARCHAR(30),
     price DECIMAL(8 , 2 ),
-    id_supplier INT,
+    nif varchar(20),
     FOREIGN KEY (nif)
-        REFERENCES Supplier (nif)
+        REFERENCES suppliers (nif)
 );
 
 CREATE TABLE clients (
@@ -43,12 +43,23 @@ CREATE TABLE clients (
     country VARCHAR(50),
     recommended_by INT,
     FOREIGN KEY (recommended_by)
-        REFERENCES Client (id_client)
+        REFERENCES clients (id_client)
 );
 
 CREATE TABLE employee (
   id_employee INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100)
+);
+
+CREATE TABLE sales (
+  id_sale INT AUTO_INCREMENT PRIMARY KEY,
+  sale_date DATE,
+  id_glasses INT,
+  id_client INT,
+  id_employee INT,
+  FOREIGN KEY (id_glasses) REFERENCES Glasses(id_glasses),
+  FOREIGN KEY (id_client) REFERENCES Client(id_client),
+  FOREIGN KEY (id_employee) REFERENCES Employee(id_employee)
 );
 
 
