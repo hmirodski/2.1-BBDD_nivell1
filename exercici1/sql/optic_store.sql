@@ -46,6 +46,14 @@ CREATE TABLE clients (
         REFERENCES Client (id_client)
 );
 
+CREATE TABLE employee (
+  id_employee INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100)
+);
+
+
+
+
 
 
 
