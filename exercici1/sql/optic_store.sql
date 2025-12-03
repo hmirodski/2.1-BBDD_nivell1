@@ -30,5 +30,22 @@ CREATE TABLE glasses (
         REFERENCES Supplier (nif)
 );
 
+CREATE TABLE clients (
+    id_client INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    phone VARCHAR(20),
+    email VARCHAR(100),
+    date_registered DATE,
+    street VARCHAR(100),
+    number VARCHAR(10),
+    city VARCHAR(50),
+    postal_code VARCHAR(10),
+    country VARCHAR(50),
+    recommended_by INT,
+    FOREIGN KEY (recommended_by)
+        REFERENCES Client (id_client)
+);
+
+
 
 
