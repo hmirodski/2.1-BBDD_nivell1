@@ -57,9 +57,9 @@ CREATE TABLE sales (
   id_glasses INT,
   id_client INT,
   id_employee INT,
-  FOREIGN KEY (id_glasses) REFERENCES Glasses(id_glasses),
-  FOREIGN KEY (id_client) REFERENCES Client(id_client),
-  FOREIGN KEY (id_employee) REFERENCES Employee(id_employee)
+  FOREIGN KEY (id_glasses) REFERENCES glasses(id_glasses),
+  FOREIGN KEY (id_client) REFERENCES clients(id_client),
+  FOREIGN KEY (id_employee) REFERENCES employee(id_employee)
 );
 
 
