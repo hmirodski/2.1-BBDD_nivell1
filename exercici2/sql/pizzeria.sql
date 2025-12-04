@@ -63,3 +63,12 @@ CREATE TABLE order_details (
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
+CREATE TABLE deliveries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL UNIQUE,
+    employee_id INT NOT NULL,
+    delivery_time DATETIME,
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+    FOREIGN KEY (employee_id) REFERENCES employees(id)
+);
+
