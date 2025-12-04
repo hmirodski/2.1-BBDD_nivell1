@@ -33,6 +33,17 @@ CREATE TABLE stores (
     FOREIGN KEY (city_id) REFERENCES cities(id)
 );
 
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(100) NOT NULL,
+    nif VARCHAR(15) UNIQUE NOT NULL,
+    phone VARCHAR(20),
+    role ENUM('cook', 'delivery') NOT NULL,
+    store_id INT NOT NULL,
+    FOREIGN KEY (store_id) REFERENCES stores(id)
+);
+
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL
