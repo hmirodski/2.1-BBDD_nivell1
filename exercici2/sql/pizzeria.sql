@@ -41,3 +41,14 @@ CREATE TABLE products (
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_date DATETIME NOT NULL,
+    delivery_type ENUM('delivery', 'pickup') NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    customer_id INT NOT NULL,
+    store_id INT NOT NULL,
+    FOREIGN KEY (customer_id) REFERENCES customers(id),
+    FOREIGN KEY (store_id) REFERENCES stores(id)
+);
+
