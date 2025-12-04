@@ -25,6 +25,14 @@ CREATE TABLE customers (
     FOREIGN KEY (city_id) REFERENCES cities(id)
 );
 
+CREATE TABLE stores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    address VARCHAR(200) NOT NULL,
+    postal_code VARCHAR(5) NOT NULL,
+    city_id INT NOT NULL,
+    FOREIGN KEY (city_id) REFERENCES cities(id)
+);
+
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL
