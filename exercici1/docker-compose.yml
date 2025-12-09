@@ -5,7 +5,7 @@ services:
     image: mysql:8.0
     container_name: mysql_optica
     environment:
-      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: optics_store
     ports:
       - "3307:3306"

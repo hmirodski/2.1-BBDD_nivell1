@@ -5,7 +5,7 @@ services:
     image: mysql:8.0
     container_name: mysql_pizzeria
     environment:
-      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: pizzeria
     ports:
       - "3307:3306"
