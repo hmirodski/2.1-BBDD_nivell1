@@ -1,5 +1,5 @@
 ﻿
-# 2.1 MySQL Queries - Nivel 1
+# 2.1 Mysql-estructura - Nivel 1
 
 ## 📄 Descripción
 Este proyecto contiene la implementación de dos ejercicios de bases de datos MySQL utilizando Docker, con scripts SQL para la creación de tablas, inserción de datos de prueba y ejecución de consultas SQL.
